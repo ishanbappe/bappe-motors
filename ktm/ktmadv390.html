@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<header class="bappe-header">
+  <div class="logo-container">
+    <div class="kanji">个</div>
+    <div class="brand-name">
+      <span class="bappe">BAPPE</span>
+      <span class="motors">MOTORS</span>
+    </div>
+    <div class="symbols">
+      <div class="symbol">&gt;</div>
+      <div class="symbol">=</div>
+    </div>
+  </div>
+</header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominar 400 - Details </title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #111;
+        color: #fff;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        border-radius: 70px;
+      }
+        .site-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1,h2 {
+      text-align: center;
+        color: #310707;
+        margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      overflow-x: scroll;
+      gap: 10px;
+      padding: 20px 0;
+      
+    }
+
+
+    .gallery img {
+      width: 950px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+
+.specs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px; /* Increased from 600px */
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        
+        .key-highlights {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+        
+        .key-highlights h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .specs-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: #34495e;
+        }
+        
+        .toggle-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #b13426;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .toggle-btn:hover {
+            background: #c0392b;
+        }
+        
+        .complete-specs {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            display: none; /* Hidden by default */
+        }
+        
+        .complete-specs h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        .spec-category {
+            margin-bottom: 20px;
+            align-content:right; ;
+        }
+        
+        .spec-category h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #dfe6e9;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .spec-name {
+            font-weight: 500;
+            color: #34495e;
+        }
+        
+        .spec-value {
+            font-weight: 600;
+        }
+
+  
+        
+        .pricing-section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .price-box {
+            margin-bottom: 25px;
+        }
+        
+        .price-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .price-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d9230f;
+        }
+        
+        .state-selector {
+            margin-top: 30px;
+        }
+        
+        .state-selector label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .state-selector select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .onroad-price {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        .onroad-price .label {
+            font-weight: 600;
+        }
+        
+        .onroad-price .value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #d9230f;
+            margin-top: 5px;
+        }
+.emi-button {
+            position: relative;
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            z-index: 1;
+            margin-top: 20px;
+        }
+        
+        .emi-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #a777e3, #6e8efb);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .emi-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .emi-button:hover:before {
+            opacity: 1;
+        }
+        
+        .emi-button:active {
+            transform: translateY(1px);
+        }
+        
+        /* EMI Calculator Modal */
+        .emi-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .emi-calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .emi-calculator h2 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #777;
+        }
+/* Columns */
+.left-column {
+    flex: 0 1 45%;
+    min-width: 0;
+}
+
+.right-column {
+    flex: 0 1 45%;
+    min-width: 0;
+}
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .specs-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    .left-column, .right-column {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Horizontal Footer Styles */
+.site-footer {
+  background: #1a1a1a;
+  color: white;
+  padding: 40px 0;
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-top: 3px solid #d9230f;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.footer-brand h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.footer-brand p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #fff;
+  background: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #d9230f;
+  transform: translateY(-3px);
+}
+
+.footer-links h4, .footer-contact h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links h4:after, .footer-contact h4:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #d9230f;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d9230f;
+}
+
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact select {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  background: #333;
+  color: white;
+  min-width: 200px;
+}
+
+.footer-contact button {
+  padding: 10px 20px;
+  background: #d9230f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.footer-contact button:hover {
+  background: #b51c0c;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  background: #111;
+  padding: 25px 0;
+  margin-top: inherit;
+  text-align: center;
+
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 13px;
+  margin: 0;
+}
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.legal-links a {
+  color: #777;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.legal-links a:hover {
+  color: #d9230f;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>himalayan 450
+    </h1>
+
+    <div class="gallery">
+      <img src="bike/dominar400bajajdominarrightrearthreequarter12 (1).webp" alt="Dominar 1"onclick="openLightbox(this.src)">
+      <img src="bike/dominar400bajajdominarrightrearthreequarter12.webp" alt="Dominar 2">
+      <img src="bike/dominar400bajajdominarrightrearthreequarter3.webp" alt="Dominar 3">
+        <img src="bike/dominar400bikewaletrackdaybajajdominar (1).webp" alt="Dominar 4">
+        <img src="bike/dominar400bikewaletrackdaybajajdominar (2).webp" alt="Dominar 5">
+        <img src="bike/dominar400bikewaletrackdaybajajdominar (3).webp" alt="Dominar 6">
+        <img src="bike/dominar400bikewaletrackdaybajajdominar (4).webp" alt="Dominar 7">
+        <img src="bike/dominar400bikewaletrackdaybajajdominar (5).webp" alt="Dominar 8">
+        <img src="bike/dominar400bikewaletrackdaybajajdominar.webp" alt="Dominar 9">
+        <img src="bike/dominar400dominarrearview.webp" alt="Dominar 10">
+        <img src="bike/dominar400dominarrightrearthreequarter.webp" alt="Dominar 11">
+      <!-- Add more images as needed -->
+    </div>
+
+<body>
+<div class="right-column">
+    <div class="specs-container">
+   
+        <div class="key-highlights">
+            <h1>himalayan 450 key Highlights</h1>
+            
+            <table class="specs-table">
+                <tr>
+                    <td>Engine Capacity</td>
+                    <td>452 cc</td>
+                </tr>
+                <tr>
+                    <td>Mileage - ARAI</td>
+                    <td>29 kmpl</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>6 Speed Manual</td>
+                </tr>
+                <tr>
+                    <td>Kerb Weight</td>
+                    <td>196 kg</td>
+                </tr>
+                <tr>
+                    <td>Fuel Tank Capacity</td>
+                    <td>17 litres</td>
+                </tr>
+                <tr>
+                    <td>Seat Height</td>
+                    <td>825 mm</td>
+                </tr>
+            </table>
+            
+            <button id="toggleSpecs" class="toggle-btn">View All Specifications and Features</button>
+        </div>
+        
+        <div id="completeSpecs" class="complete-specs">
+            <h2>himalayan 450 Complete Specifications</h2>
+            
+            <div class="spec-category">
+                <h3>Engine & Performance</h3>
+                <div class="spec-item">
+                    <span class="spec-name">Engine Type</span>
+                    <span class="spec-value">Single Cylinder, 4 Valve, Liquid Cooled</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Displacement</span>
+                    <span class="spec-value">452 cc</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Max Power</span>
+                    <span class="spec-value">39.47 bhp @ 8000 rpm</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Max Torque</span>
+                    <span class="spec-value">40 Nm @ 5500 rpm</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Cooling System</span>
+                    <span class="spec-value">Liquid Cooled</span>
+                </div>
+            </div>
+            
+            <div class="spec-category">
+                <h3>Dimensions & Chassis</h3>
+                <div class="spec-item">
+                    <span class="spec-name">Kerb Weight</span>
+                    <span class="spec-value">193 kg</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Seat Height</span>
+                    <span class="spec-value">800 mm</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Ground Clearance</span>
+                    <span class="spec-value">157 mm</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-name">Fuel Tank Capacity</span>
+                    <span class="spec-value">13 litres</span>
+                </div>
+            </div>
+            
+            <button id="hideSpecs" class="toggle-btn">Go Back to Key Features</button>
+        </div>
+    </div>
+</div>
+    <script>
+        const toggleBtn = document.getElementById('toggleSpecs');
+        const hideBtn = document.getElementById('hideSpecs');
+        const completeSpecs = document.getElementById('completeSpecs');
+        
+        toggleBtn.addEventListener('click', function() {
+            completeSpecs.style.display = 'block';
+            toggleBtn.style.display = 'none';
+        });
+        
+        hideBtn.addEventListener('click', function() {
+            completeSpecs.style.display = 'none';
+            toggleBtn.style.display = 'block';
+        });
+    </script>
+ 
+   <div class="left-column">
+            <div class="pricing-section">
+                <div class="price-box">
+                    <div class="price-label">Ex-Showroom Price</div>
+                    <div class="price-value">₹2,12,000</div>
+                </div>
+                
+                <div class="state-selector">
+                    <label for="state">Select Your State for On-Road Price:</label>
+                    <select id="state" onchange="calculateOnRoadPrice()">
+                        <option value="">-- Select State --</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai (Maharashtra)</option>
+                        <option value="bangalore">Bangalore (Karnataka)</option>
+                        <option value="chennai">Chennai (Tamil Nadu)</option>
+                        <option value="kolkata">Kolkata (West Bengal)</option>
+                        <option value="hyderabad">Hyderabad (Telangana)</option>
+                        <option value="pune">Pune (Maharashtra)</option>
+                        <option value="ahmedabad">Ahmedabad (Gujarat)</option>
+                        <option value="jaipur">Jaipur (Rajasthan)</option>
+                    </select>
+                    
+                    <div class="onroad-price" id="onroadPriceContainer" style="display: none;">
+                        <div class="label">On-Road Price in <span id="selectedState"></span></div>
+                        <div class="value" id="onroadPrice"></div>
+                        <div class="breakup">(Including RTO, Insurance &amp; other charges)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="emi-section">
+        <button class="emi-button" id="emiButton">EMI Calculator</button>
+    </div>
+
+ <div class="emi-modal" id="emiModal">
+        <div class="emi-calculator">
+            <button class="close-btn" id="closeEmi">&times;</button>
+            <h2>EMI Calculator</h2>
+            <p>Estimate your monthly payments</p>
+            
+            <div class="input-group">
+                <label>Loan Amount (₹)</label>
+                <input type="number" id="loanAmount" placeholder="e.g. 3500">
+            </div>
+            
+            <div class="input-group">
+                <label>Interest Rate (% p.a.)</label>
+                <input type="number" id="interestRate" placeholder="e.g. 9.5" step="0.01">
+            </div>
+            
+            <div class="input-group">
+                <label>Loan Tenure (months)</label>
+                <input type="number" id="loanTenure" placeholder="e.g. 24">
+            </div>
+            
+            <button class="calculate-btn" id="calculateEmi">Calculate EMI</button>
+            
+            <div id="emiResult" style="margin-top: 20px; font-size: 18px; text-align: center;"></div>
+        </div>
+    </div>
+        <script>
+        // State-wise RTO tax percentages (example values)
+        const stateTaxes = {
+            "delhi": 10,
+            "mumbai": 13,
+            "bangalore": 14,
+            "chennai": 12,
+            "hyderabad": 13,
+            "kolkata": 11,
+            "pune": 13,
+            "ahmedabad": 12,
+            "jaipur": 11
+        };
+        
+        const exShowroomPrice = 212000;
+        const insurance = 12000; // Fixed insurance cost
+        
+        function calculateOnRoadPrice() {
+            const stateSelect = document.getElementById('state');
+            const selectedState = stateSelect.value;
+            const onroadPriceContainer = document.getElementById('onroadPriceContainer');
+            const selectedStateSpan = document.getElementById('selectedState');
+            const onroadPriceElement = document.getElementById('onroadPrice');
+            
+            if (selectedState) {
+                // Get state name for display
+                const stateName = stateSelect.options[stateSelect.selectedIndex].text.split('(')[0].trim();
+                selectedStateSpan.textContent = stateName;
+                
+                // Calculate on-road price
+                const taxPercentage = stateTaxes[selectedState];
+                const taxAmount = exShowroomPrice * (taxPercentage / 100);
+                const onroadPrice = exShowroomPrice + taxAmount + insurance;
+                
+                // Display the result
+                onroadPriceElement.textContent = '₹' + onroadPrice.toLocaleString('en-IN');
+                onroadPriceContainer.style.display = 'block';
+            } else {
+                onroadPriceContainer.style.display = 'none';
+            }
+        }
+        </script>
+    <script>
+        // Open modal
+        document.getElementById('emiButton').addEventListener('click', function() {
+            document.getElementById('emiModal').style.display = 'flex';
+        });
+        
+        // Close modal
+        document.getElementById('closeEmi').addEventListener('click', function() {
+            document.getElementById('emiModal').style.display = 'none';
+        });
+        
+        // Calculate EMI
+        document.getElementById('calculateEmi').addEventListener('click', function() {
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const rate = parseFloat(document.getElementById('interestRate').value) / 1200; // Monthly rate
+            const tenure = parseFloat(document.getElementById('loanTenure').value);
+            
+            if (amount && rate && tenure) {
+                const emi = amount * rate * Math.pow(1 + rate, tenure) / (Math.pow(1 + rate, tenure) - 1);
+                document.getElementById('emiResult').innerHTML = `Estimated EMI: ₹${emi.toFixed(2)}`;
+            } else {
+                document.getElementById('emiResult').innerHTML = 'Please enter all values';
+            }
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('emiModal')) {
+                document.getElementById('emiModal').style.display = 'none';
+            }
+        });
+    </script>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>BAPPE MOTORS</h3>
+      <p>Your trusted partner for premium two-wheelers</p>
+
+</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/ishan.bapardekar/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ishaann.21/"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ishaannb"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 123 Motor Avenue, Bike City</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> info@bappemotors.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2023 BAPPE MOTORS. All Rights Reserved.</p>
+    <div class="legal-links">
+      <a href="">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Disclaimer</a>
+    </div> 
+  </div>
+
+</footer>
+</body>
+</html>
